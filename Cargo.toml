@@ -21,18 +21,15 @@ description = "Unofficial and basic CLI wrapper around the `::prettyplease` libr
 keywords = ["format", "formatting", "rustfmt", "syn", "comments"]
 
 [features]
-default = [
-    "check-shows-diffs",
-]
-
+default = ["check-shows-diffs"]
 check-shows-diffs = ["prettydiff"]
 
 [dependencies]
-anyhow = "1.0.1"
-prettyplease = "0.1.2"
+anyhow = "1.0.93"
+prettyplease = "0.2.25"
 prettydiff.optional = true
-prettydiff.version = "0.5.1"  # Fails on Windows: https://github.com/romankoblov/prettydiff/issues/9
-syn.version = "1.0.85"
+prettydiff.version = "0.7.0"  # Fails on Windows: https://github.com/romankoblov/prettydiff/issues/9
+syn.version = "2.0.87"
 syn.features = ["full"]
 
 [dev-dependencies]
